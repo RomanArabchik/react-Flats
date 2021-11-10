@@ -17,6 +17,7 @@ export default function ComboBox() {
   const changeStreet = (e, value) => {
     if (value) {
       dispatch(requestHouses(value.id))
+      console.log(value.id)
     } else {
       dispatch(setHouse(''))
       dispatch(setFlat(''))
@@ -28,6 +29,7 @@ export default function ComboBox() {
   const changeHouse = (event, value) => {
     if (value) {
       dispatch(requestFlats(value.id))
+      console.log(value.id)
     } else {
       dispatch(setFlat(''))
       dispatch(clearFlats())
@@ -70,16 +72,6 @@ export default function ComboBox() {
           sx={{ width: 300 }}
           renderInput={(params) => <TextField {...params} label="Кв./офис" />}
         />
-      </Grid>
-      <Grid item>
-        <div onClick={()=>{
-          console.log(inputs.streets)
-          console.log(inputs.street)
-          console.log(inputs.houses)
-          console.log(inputs.house)
-          console.log(inputs.flats)
-          console.log(inputs.flat)
-        }}> button</div>
       </Grid>
     </Grid>
   );

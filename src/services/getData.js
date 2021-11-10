@@ -33,8 +33,10 @@ export const requestHouses = (id) => {
 export const requestFlats = (id) => {
   return async (dispatch) => {
     const response = await axios.get(`${baseUrl}/house_flats/${id}`)
+    console.log(`${baseUrl}/house_flats/${id}`)
     const flats = response.data.filter((item )=> onlyFlats(item))
     const flatsArr = flats.map(item => {return {label: item.name, id: item.id}})
+    console.log(flatsArr)
     dispatch(getFlats(flatsArr))
   }
 }

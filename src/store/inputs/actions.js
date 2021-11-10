@@ -9,7 +9,7 @@ export const SET_FLAT = 'SET_FLAT'
 
 export const getStreets = (streets) =>({type: GET_STREETS, payload: streets})
 export const getHouses = (houses) =>({type: GET_HOUSES, payload: houses})
-export const getFlats = (flats) =>({type: GET_HOUSES, payload: flats})
+export const getFlats = (flats) =>({type: GET_FLATS, payload: flats})
 export const setStreet = (value) => ({type: SET_STREET, payload: value})
 export const setHouse = (value) => ({type: SET_HOUSE, payload: value})
 export const setFlat = (value) => ({type: SET_FLAT, payload: value})
